@@ -1,0 +1,13 @@
+<div class="filter">
+  <form [formGroup]="searchForm"  class="filter-form">
+    <input placeholder="Name" formControlName="searchName" />
+    <input placeholder="Type" formControlName="searchType" />
+  </form>
+  <button
+    class="btn btn-info"
+    [routerLink]="['/result']"
+    [queryParams]="{ name: searchName, type: searchType }"
+  >
+    Искать
+  </button>
+</div>
